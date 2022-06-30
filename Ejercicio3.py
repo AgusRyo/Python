@@ -89,3 +89,104 @@ else:
     else:
         print("Tu grupo es B")
 print("")
+
+'''
+Los tramos impositivos para la declaración de la renta en un determinado país son los siguientes:
+
+Renta	Tipo impositivo
+Menos de $10000	        5%
+Entre $10000 y $20000	15%
+Entre $20000 y $35000	20%
+Entre $35000 y $60000	30%
+Más de $60000	        45%
+
+Escribir un programa que pregunte al usuario su renta anual y muestre por pantalla el tipo impositivo que le
+corresponde.
+'''
+
+renta= int(input("Ingrese su renta: "))
+
+if renta < 10000:
+    print("Corresponde pagar" + str(renta*0.05))
+elif renta >= 10000 and renta <20000: 
+    print("Corresponde pagar" + str(renta*0.15))
+elif renta >=20000 and renta <35000:
+    print("Corresponde pagar" + str(renta*0.20))
+elif renta>= 35000 and renta < 60000:
+    print("Corresponde pagar" + str(renta*0.30))
+else:
+    print("Corresponde pagar" + str(renta*0.45))
+
+print("")
+
+'''
+En una determinada empresa, sus empleados son evaluados al final de cada año. 
+Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, traduciéndose en
+ mejores beneficios. Los puntos que pueden conseguir los empleados pueden ser 0.0, 0.4, 0.6 o más, 
+ pero no valores intermedios entre las cifras mencionadas. 
+ A continuación se muestra una tabla con los niveles correspondientes a cada puntuación.
+ La cantidad de dinero conseguida en cada nivel es de $2.400 multiplicada por la puntuación del nivel.
+
+Nivel	        Puntuación
+Inaceptable	        0.0
+Aceptable	        0.4
+Meritorio	        0.6 o más
+
+Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, 
+así como la cantidad de dinero que recibirá el usuario.
+
+'''
+
+puntaje= float("Ingrese la puntuación: ")
+
+if puntaje == 0.0:
+    bono= puntaje * 2400
+    print("Tu nivel es INACEPTABLE, te corresponde: $" + str(bono))
+if puntaje == 0.4:
+    bono= puntaje * 2400
+    print("Tu nivel es ACEPTABLE, te corresponde: $" + str(bono))
+if puntaje >= 0.6:
+    bono= puntaje * 2400
+    print("Tu nivel es MERITORIO, te corresponde: $" + str(bono))
+
+print("")
+
+'''
+Escribir un programa para una empresa que tiene salas de juegos para todas las edades y quiere calcular de
+forma automática el precio que debe cobrar a sus clientes por entrar. El programa debe preguntar al usuario la 
+edad del cliente y mostrar el precio de la entrada. Si el cliente es menor de 4 años puede entrar gratis, 
+si tiene entre 4 y 18 años debe pagar $5 y si es mayor de 18 años, $10.
+
+'''
+edad= int(input("Ingrese su edad: "))
+
+if edad <4 :
+    print("Tu entrada es GRATIS")
+elif edad >= 4 and edad <=18:
+    print("Debes abonar $5 por la entrada")
+else:
+    print("Debes abonar $10 por la entrada")
+
+print("")
+
+'''
+La pizzería Bella Napoli ofrece pizzas vegetarianas y no vegetarianas a sus clientes. 
+Los ingredientes para cada tipo de pizza aparecen a continuación.
+
+Ingredientes vegetarianos: Pimiento y tofu.
+Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+Escribir un programa que pregunte al usuario si quiere una pizza vegetariana o no, y en función de su 
+respuesta le muestre un menú con los ingredientes disponibles para que elija.
+Solo se puede eligir un ingrediente además de la mozzarella y el tomate que están en todas la pizzas.
+Al final se debe mostrar por pantalla si la pizza elegida es vegetariana o no y todos los ingredientes que
+lleva.
+'''
+print("Bienvenido a la Pizezería Bella Napoli")
+'''
+rta= input("Desea ordenar una pizza normal o vegetariana? N / V: " )
+if rta== N:
+    print("Ha seleccionado pizza normal")
+    ing=input("Que ingrediente extra desea para su pizza normal, (P)Peperoni, (J)Jamón, (S)Salmón: ")
+    if ing == "P":
+        print("Ha seleccionado una pizza normal con tomate, muzzarella y peperoni")
+    elif ing=="J"''' 
